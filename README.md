@@ -149,3 +149,5 @@ Use PM2 or similar with two processes: `api` and `worker`.
 ## License
 
 MIT
+<img width="942" height="839" alt="image" src="https://github.com/user-attachments/assets/408385f3-c1f5-4b9e-9bdc-c31737e2f209" />
+
