@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-geist-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Georgia", "Times New Roman", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-muted text-slate-800 antialiased;
+  }
+}
+
+@layer utilities {
+  .exam-paper {
+    @apply bg-white text-slate-900;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .exam-paper {
+    box-shadow: none !important;
+  }
+}
