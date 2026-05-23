@@ -1,34 +1,20 @@
+# Render Blueprint — backend only (SIMPLE_DEV = no MongoDB/Redis/worker)
+# https://dashboard.render.com/select-repo?type=blueprint
 services:
   - type: web
-    name: assessment-api
+    name: vedaai-api
     runtime: node
     rootDir: backend
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm install --ignore-scripts && npm run build
+    startCommand: node dist/index.js
+    healthCheckPath: /health
     envVars:
-      - key: MONGODB_URI
-        sync: false
-      - key: REDIS_HOST
-        sync: false
-      - key: REDIS_PORT
-        sync: false
+      - key: SIMPLE_DEV
+        value: "true"
+      - key: NODE_ENV
+        value: production
       - key: CORS_ORIGIN
         sync: false
       - key: OPENAI_API_KEY
         sync: false
-
-  - type: worker
-    name: assessment-worker
-    runtime: node
-    rootDir: backend
-    buildCommand: npm install && npm run build
-    startCommand: npm run start:worker
-    envVars:
-      - key: MONGODB_URI
-        sync: false
-      - key: REDIS_HOST
-        sync: false
-      - key: REDIS_PORT
-        sync: false
-      - key: OPENAI_API_KEY
-        sync: false
+        optional: true
