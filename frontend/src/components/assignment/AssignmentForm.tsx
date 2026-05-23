@@ -61,7 +61,13 @@ export function AssignmentForm() {
       setUpdate({ status: "queued", progress: 5 });
       addToast("Assignment created — generating paper…", "info");
 
-      await api.generatePaper(assignment._id);
+      setUpdate({ status: "processing", progress: 50 });
+      const { paperId } = await api.generatePaper(assignment._id);
+      if (paperId) {
+        addToast("Paper generated successfully!", "success");
+        router.push(`/papers/${paperId}`);
+        return;
+      }
       router.push(`/assignments/${assignment._id}`);
     } catch (err) {
       const message =
