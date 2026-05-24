@@ -4,8 +4,8 @@
 
 | Type | URL |
 |------|-----|
-| **Live app (submit this)** | https://wide-areas-return.loca.lt |
-| **Demo exam paper** | https://wide-areas-return.loca.lt/papers/5a556fde-e51b-47e9-94bc-173f3e8a2f9b |
+| **Live app (submit this)** | https://vedaai-assignment-lp87.vercel.app |
+| **Demo exam paper** | https://vedaai-assignment-lp87.vercel.app/papers/af11cf91-27ea-42b8-964c-1dac212b9843 |
 | **GitHub source** | https://github.com/JANGAMBALACHANDRAMOHANREDDY/Vedaai-assignment |
 | **Permanent deploy** | https://vercel.com/new/clone?repository-url=https://github.com/JANGAMBALACHANDRAMOHANREDDY/Vedaai-assignment |
 
